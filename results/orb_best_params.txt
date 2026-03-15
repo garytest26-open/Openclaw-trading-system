@@ -1,0 +1,40 @@
+Estadisticas Completas:
+Start                     2025-11-03 14:30...
+End                       2026-01-28 19:05...
+Duration                     86 days 04:35:00
+Exposure Time [%]                    88.67673
+Equity Final [$]                  10781.02731
+Equity Peak [$]                   10843.63107
+Commissions [$]                     220.02586
+Return [%]                            7.81027
+Buy & Hold Return [%]                 1.83379
+Return (Ann.) [%]                    37.87882
+Volatility (Ann.) [%]                12.64115
+CAGR [%]                             24.59189
+Sharpe Ratio                          2.99647
+Sortino Ratio                         6.31766
+Calmar Ratio                         14.29404
+Alpha [%]                             7.64402
+Beta                                  0.09066
+Max. Drawdown [%]                    -2.64997
+Avg. Drawdown [%]                    -0.22015
+Max. Drawdown Duration       14 days 19:50:00
+Avg. Drawdown Duration        0 days 16:49:00
+# Trades                                   22
+Win Rate [%]                         40.90909
+Best Trade [%]                        2.76929
+Worst Trade [%]                      -0.80025
+Avg. Trade [%]                        0.35845
+Max. Trade Duration          40 days 00:30:00
+Avg. Trade Duration           3 days 13:52:00
+Profit Factor                         2.23807
+Expectancy [%]                        0.36464
+SQN                                   1.47175
+Kelly Criterion                       0.22373
+_strategy                 ORBStrategy(atr_...
+_equity_curve                             ...
+_trades                       Size  EntryB...
+dtype: object
+
+Mejores Parametros:
+ORBStrategy(atr_mult=3.5,tp_mult=3.0,ema_fast=5,ema_slow=60,vol_mult=1.0)

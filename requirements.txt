@@ -1,0 +1,11 @@
+ccxt>=4.0.0
+pandas
+numpy
+matplotlib
+mplfinance
+scipy
+yfinance
+python-dotenv
+ta-lib
+backtesting
+eth_account

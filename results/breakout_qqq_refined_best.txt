@@ -1,0 +1,39 @@
+Start                     2025-11-05 14:30...
+End                       2026-01-30 20:45...
+Duration                     86 days 06:15:00
+Exposure Time [%]                    55.69536
+Equity Final [$]                  11650.38647
+Equity Peak [$]                   11696.28625
+Commissions [$]                      93.36214
+Return [%]                           16.50386
+Buy & Hold Return [%]                 1.51171
+Return (Ann.) [%]                    92.02242
+Volatility (Ann.) [%]                24.23653
+CAGR [%]                             56.24486
+Sharpe Ratio                          3.79685
+Sortino Ratio                        13.28126
+Calmar Ratio                         19.47134
+Alpha [%]                            15.85813
+Beta                                  0.42716
+Max. Drawdown [%]                    -4.72605
+Avg. Drawdown [%]                    -0.47389
+Max. Drawdown Duration        7 days 03:30:00
+Avg. Drawdown Duration        1 days 05:45:00
+# Trades                                    9
+Win Rate [%]                            100.0
+Best Trade [%]                        3.01176
+Worst Trade [%]                       0.29398
+Avg. Trade [%]                        1.61442
+Max. Trade Duration          20 days 00:45:00
+Avg. Trade Duration           5 days 04:57:00
+Profit Factor                             NaN
+Expectancy [%]                        1.61821
+SQN                                   5.39447
+Kelly Criterion                           NaN
+_strategy                 DonchianBreakout...
+_equity_curve                             ...
+_trades                      Size  EntryBa...
+dtype: object
+
+Strategy Args:
+DonchianBreakoutQQQ(lookback=38,exit_lookback=6,atr_stop_mult=1.5)

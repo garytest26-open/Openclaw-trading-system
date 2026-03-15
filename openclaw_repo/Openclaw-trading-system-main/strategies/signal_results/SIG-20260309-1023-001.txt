@@ -1,0 +1,47 @@
+
+🟢 *SEÑAL #1 - PRUEBA MANUAL* 📈
+
+*ID:* `SIG-20260309-1023-001`
+*Hora UTC:* 10:23
+*Hora Madrid:* 11:23 🇪🇸
+*Día de prueba:* 1/14
+*Capital prueba:* $500
+
+*🎯 ACTIVO:* BTC
+*📊 TIPO:* Trend Following
+*🧭 DIRECCIÓN:* LONG (COMPRA)
+
+*💰 PRECIOS:*
+• Entrada: `$51,263.43`
+• Stop Loss: `$50,313.63`
+• Take Profits: `$52,032.38` / `$53,057.65` / `$54,851.87`
+
+*📈 POSICIÓN:*
+• Tamaño: `$4.49` (0.9% de $500)
+• Confianza: 80%
+• Risk/Reward: 1:0.8
+
+*⚠️ RIESGO ($500 CAPITAL):*
+• Pérdida máxima: `$0.08` (1.9%)
+• Límite diario: 3% ($15)
+• Límite semanal: 8% ($40)
+• Drawdown máximo: 15% ($75)
+
+*📊 CONDICIONES DE MERCADO:*
+• Fuerza de tendencia: 0.74/1.0
+• Volatilidad: 1.9%
+• Volumen: 1.22x promedio
+
+*✅ ACCIÓN REQUERIDA (FRAN):*
+1. Ejecutar LONG en BTC a `$51,263.43`
+2. Colocar Stop Loss en `$50,313.63`
+3. Colocar Take Profits en niveles indicados
+4. Reportar resultado cuando cierre la operación
+
+*📝 NOTAS PRUEBA MANUAL:*
+• Capital de prueba: $500
+• Día 1 de 14 días de prueba
+• Objetivo: 20-30 trades en 14 días
+• Win rate objetivo: >55%
+• Profit factor objetivo: >1.8
+• Ejecutar solo si estás de acuerdo con el riesgo

@@ -1,0 +1,112 @@
+================================================================================
+MEJORES PARAMETROS ENCONTRADOS
+================================================================================
+
+Fecha: 2026-02-04 20:03:48
+Total combinaciones probadas: 360
+Configuraciones rentables: 18
+
+================================================================================
+TOP 10 CONFIGURACIONES RENTABLES
+================================================================================
+
+#5 - Retorno: 0.28%
+   Lookback Entry: 5
+   Lookback Exit: 3
+   ATR Multiplier: 1.5
+   Filtro Tendencia: No
+   Trades: 22
+   Win Rate: 40.9%
+   Sharpe: 0.01
+   Max DD: -14.04%
+
+#32 - Retorno: 4.60%
+   Lookback Entry: 5
+   Lookback Exit: 10
+   ATR Multiplier: 0.5
+   Filtro Tendencia: Si
+   Trades: 17
+   Win Rate: 11.8%
+   Sharpe: 0.43
+   Max DD: -11.83%
+
+#35 - Retorno: 0.61%
+   Lookback Entry: 5
+   Lookback Exit: 10
+   ATR Multiplier: 1.5
+   Filtro Tendencia: No
+   Trades: 16
+   Win Rate: 25.0%
+   Sharpe: 0.03
+   Max DD: -17.09%
+
+#37 - Retorno: 2.68%
+   Lookback Entry: 5
+   Lookback Exit: 10
+   ATR Multiplier: 2.0
+   Filtro Tendencia: No
+   Trades: 13
+   Win Rate: 30.8%
+   Sharpe: 0.13
+   Max DD: -13.79%
+
+#41 - Retorno: 5.77%
+   Lookback Entry: 5
+   Lookback Exit: 12
+   ATR Multiplier: 0.5
+   Filtro Tendencia: No
+   Trades: 17
+   Win Rate: 5.9%
+   Sharpe: 0.35
+   Max DD: -12.20%
+
+#43 - Retorno: 4.64%
+   Lookback Entry: 5
+   Lookback Exit: 12
+   ATR Multiplier: 1.0
+   Filtro Tendencia: No
+   Trades: 13
+   Win Rate: 15.4%
+   Sharpe: 0.24
+   Max DD: -16.72%
+
+#51 - Retorno: 6.08%
+   Lookback Entry: 5
+   Lookback Exit: 15
+   ATR Multiplier: 0.5
+   Filtro Tendencia: No
+   Trades: 16
+   Win Rate: 6.2%
+   Sharpe: 0.37
+   Max DD: -11.89%
+
+#65 - Retorno: 0.97%
+   Lookback Entry: 10
+   Lookback Exit: 3
+   ATR Multiplier: 1.5
+   Filtro Tendencia: No
+   Trades: 17
+   Win Rate: 41.2%
+   Sharpe: 0.05
+   Max DD: -15.85%
+
+#67 - Retorno: 6.22%
+   Lookback Entry: 10
+   Lookback Exit: 3
+   ATR Multiplier: 2.0
+   Filtro Tendencia: No
+   Trades: 15
+   Win Rate: 53.3%
+   Sharpe: 0.32
+   Max DD: -11.92%
+
+#69 - Retorno: 5.23%
+   Lookback Entry: 10
+   Lookback Exit: 3
+   ATR Multiplier: 2.5
+   Filtro Tendencia: No
+   Trades: 15
+   Win Rate: 53.3%
+   Sharpe: 0.27
+   Max DD: -12.29%
+

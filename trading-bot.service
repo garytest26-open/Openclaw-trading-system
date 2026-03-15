@@ -1,0 +1,27 @@
+[Unit]
+Description=Bot de Trading Automatico - Turtle Breakout Strategy
+After=network.target
+Documentation=https://github.com/tu-usuario/algo_trading_agent
+
+[Service]
+Type=simple
+User=YOUR_USERNAME
+WorkingDirectory=/home/YOUR_USERNAME/algo_trading_agent
+Environment="PATH=/home/YOUR_USERNAME/algo_trading_agent/venv/bin"
+ExecStart=/home/YOUR_USERNAME/algo_trading_agent/venv/bin/python3 /home/YOUR_USERNAME/algo_trading_agent/live_bot.py
+
+# Reiniciar automáticamente si el bot falla
+Restart=always
+RestartSec=10
+
+# Limitar recursos (opcional)
+MemoryMax=512M
+CPUQuota=50%
+
+# Logging
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=trading-bot
+
+[Install]
+WantedBy=multi-user.target

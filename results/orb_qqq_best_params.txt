@@ -1,0 +1,40 @@
+Estadisticas Completas QQQ (1 Year Backtest):
+Start                     2025-01-28 19:30...
+End                       2026-01-28 19:30...
+Duration                    365 days 00:00:00
+Exposure Time [%]                     63.7457
+Equity Final [$]                  11010.71232
+Equity Peak [$]                   11481.25858
+Commissions [$]                       41.4029
+Return [%]                           10.10712
+Buy & Hold Return [%]                20.08392
+Return (Ann.) [%]                    10.10712
+Volatility (Ann.) [%]                 8.79176
+CAGR [%]                              6.87345
+Sharpe Ratio                          1.14961
+Sortino Ratio                         1.88113
+Calmar Ratio                          2.46612
+Alpha [%]                            11.27055
+Beta                                 -0.05793
+Max. Drawdown [%]                    -4.09839
+Avg. Drawdown [%]                    -0.53827
+Max. Drawdown Duration       68 days 05:00:00
+Avg. Drawdown Duration        4 days 12:00:00
+# Trades                                    7
+Win Rate [%]                         42.85714
+Best Trade [%]                       14.56965
+Worst Trade [%]                      -2.85153
+Avg. Trade [%]                        3.32799
+Max. Trade Duration          83 days 00:00:00
+Avg. Trade Duration          34 days 02:00:00
+Profit Factor                         4.06468
+Expectancy [%]                        3.55562
+SQN                                   1.17493
+Kelly Criterion                       0.29468
+_strategy                 ORBStrategy(atr_...
+_equity_curve                             ...
+_trades                      Size  EntryBa...
+dtype: object
+
+Mejores Parametros:
+ORBStrategy(atr_mult=3.5,tp_mult=5.0,ema_fast=10,ema_slow=50,vol_mult=1.5)

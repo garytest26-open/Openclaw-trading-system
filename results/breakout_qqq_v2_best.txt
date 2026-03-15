@@ -1,0 +1,40 @@
+Resultados Optimización Refinada (v2):
+Start                     2025-01-02 14:30...
+End                       2026-01-30 20:30...
+Duration                    393 days 06:00:00
+Exposure Time [%]                    92.08556
+Equity Final [$]                   13772.9995
+Equity Peak [$]                   13812.68981
+Commissions [$]                     107.64186
+Return [%]                              37.73
+Buy & Hold Return [%]                19.91091
+Return (Ann.) [%]                    34.82175
+Volatility (Ann.) [%]                28.86715
+CAGR [%]                             22.76976
+Sharpe Ratio                          1.20628
+Sortino Ratio                         2.51522
+Calmar Ratio                          1.58134
+Alpha [%]                            20.85562
+Beta                                  0.84749
+Max. Drawdown [%]                   -22.02037
+Avg. Drawdown [%]                    -0.96412
+Max. Drawdown Duration      125 days 19:00:00
+Avg. Drawdown Duration        4 days 14:00:00
+# Trades                                    9
+Win Rate [%]                            100.0
+Best Trade [%]                       18.68858
+Worst Trade [%]                       0.17717
+Avg. Trade [%]                        3.61761
+Max. Trade Duration         294 days 02:00:00
+Avg. Trade Duration          39 days 21:00:00
+Profit Factor                             NaN
+Expectancy [%]                        3.74531
+SQN                                   2.26959
+Kelly Criterion                           NaN
+_strategy                 DonchianBreakout...
+_equity_curve                             ...
+_trades                      Size  EntryBa...
+dtype: object
+
+Strategy Args:
+DonchianBreakoutQQQ(lookback=10,exit_lookback=3,atr_stop_mult=1.0)

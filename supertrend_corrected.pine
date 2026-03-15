@@ -1,0 +1,62 @@
+// This source code is subject to the terms of the Mozilla Public License 2.0 at https://mozilla.org/MPL/2.0/
+// © AlgoTradingAgent
+
+//@version=5
+strategy("Bitcoin SuperTrend 1H (Python Logic)", overlay=true, initial_capital=10000, default_qty_type=strategy.percent_of_equity, default_qty_value=100, commission_type=strategy.commission.percent, commission_value=0.1)
+
+// --- Inputs ---
+atrPeriod = input.int(10, "ATR Length", minval=1)
+factor = input.float(5.0, "Factor", minval=0.1, step=0.1)
+
+// --- Custom SuperTrend (SMA Based) ---
+// El bot de Python usa SMA (Simple Moving Average) para el ATR.
+// Pine Script por defecto usa RMA. Implementamos la lógica Manualmente.
+
+// 1. Calcular True Range
+tr_val = ta.tr
+
+// 2. Calcular ATR usando SMA (No RMA)
+myAtr = ta.sma(tr_val, atrPeriod) 
+
+// 3. Basic Bands
+mid = (high + low) / 2
+basicUpper = mid + (factor * myAtr)
+basicLower = mid - (factor * myAtr)
+
+// 4. Final Bands & Trend logic
+var float finalUpper = 0.0
+var float finalLower = 0.0
+var int trend = 1 // 1 = Uptrend, -1 = Downtrend
+
+// Logic for Upper Band (Red / Downtrend Resistance)
+// Si la banda bajó (basic < prev) O el precio rompió la banda anterior (close[1] > prev), usar Basic.
+// Si no, mantener la anterior.
+finalUpper := if (basicUpper < nz(finalUpper[1])) or (close[1] > nz(finalUpper[1]))
+    basicUpper
+else
+    nz(finalUpper[1])
+
+// Logic for Lower Band (Green / Uptrend Support)
+finalLower := if (basicLower > nz(finalLower[1])) or (close[1] < nz(finalLower[1]))
+    basicLower
+else
+    nz(finalLower[1])
+
+// 5. Trend Switch Logic
+// Si tendencia era Bajista (-1) y precio cierra por encima de Upper -> Cambio a Alcista (1)
+// Si tendencia era Alcista (1) y precio cierra por debajo de Lower -> Cambio a Bajista (-1)
+if trend == -1 and close > finalUpper[1]
+    trend := 1
+else if trend == 1 and close < finalLower[1]
+    trend := -1
+
+// 6. Plotting
+superCurve = trend == 1 ? finalLower : finalUpper
+plot(superCurve, color = trend == 1 ? color.green : color.red, linewidth=2, title="SuperTrend (SMA)")
+
+// --- Execution ---
+if trend == 1 and trend[1] == -1
+    strategy.entry("Long", strategy.long, comment="Bull 🚀")
+
+if trend == -1 and trend[1] == 1
+    strategy.entry("Short", strategy.short, comment="Bear 🐻")

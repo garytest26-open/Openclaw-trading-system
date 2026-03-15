@@ -1,0 +1,41 @@
+BACKTEST - ESTRATEGIA NASDAQ OPTIMIZADA
+================================================================================
+
+Fecha: 2026-02-04 20:08:24
+
+Start                     2025-02-04 00:00:00
+End                       2026-02-04 00:00:00
+Duration                    365 days 00:00:00
+Exposure Time [%]                    63.09524
+Equity Final [$]                  10621.86848
+Equity Peak [$]                   12059.32595
+Commissions [$]                     327.38746
+Return [%]                            6.21868
+Buy & Hold Return [%]                16.51885
+Return (Ann.) [%]                     6.21868
+Volatility (Ann.) [%]                 19.3598
+CAGR [%]                               4.2532
+Sharpe Ratio                          0.32122
+Sortino Ratio                         0.48549
+Calmar Ratio                          0.52171
+Alpha [%]                            12.07534
+Beta                                 -0.35454
+Max. Drawdown [%]                   -11.91988
+Avg. Drawdown [%]                    -2.91606
+Max. Drawdown Duration      115 days 00:00:00
+Avg. Drawdown Duration       22 days 00:00:00
+# Trades                                   15
+Win Rate [%]                         53.33333
+Best Trade [%]                        8.38072
+Worst Trade [%]                      -3.43851
+Avg. Trade [%]                        0.40614
+Max. Trade Duration          37 days 00:00:00
+Avg. Trade Duration          14 days 00:00:00
+Profit Factor                         1.42574
+Expectancy [%]                        0.46209
+SQN                                   0.43787
+Kelly Criterion                       0.13739
+_strategy                 OptimizedBreakou...
+_equity_curve                             ...
+_trades                       Size  EntryB...
+dtype: object

@@ -1,0 +1,46 @@
+
+🟢 *SEÑAL #1 - PRUEBA MANUAL* 📈
+
+*ID:* `SIG-20260309-1015-001`
+*Hora:* 10:15 UTC
+*Día de prueba:* 1/14
+*Capital prueba:* $500
+
+*🎯 ACTIVO:* SOL
+*📊 TIPO:* Mean Reversion
+*🧭 DIRECCIÓN:* LONG (COMPRA)
+
+*💰 PRECIOS:*
+• Entrada: `$114.25`
+• Stop Loss: `$111.74`
+• Take Profits: `$115.96` / `$118.25` / `$122.25`
+
+*📈 POSICIÓN:*
+• Tamaño: `$4.45` (0.89% de $500)
+• Confianza: 78%
+• Risk/Reward: 1:0.7
+
+*⚠️ RIESGO ($500 CAPITAL):*
+• Pérdida máxima: `$0.1` (2.2%)
+• Límite diario: 3% ($15)
+• Límite semanal: 8% ($40)
+• Drawdown máximo: 15% ($75)
+
+*📊 CONDICIONES DE MERCADO:*
+• Fuerza de tendencia: 0.63/1.0
+• Volatilidad: 2.2%
+• Volumen: 1.18x promedio
+
+*✅ ACCIÓN REQUERIDA (FRAN):*
+1. Ejecutar LONG en SOL a `$114.25`
+2. Colocar Stop Loss en `$111.74`
+3. Colocar Take Profits en niveles indicados
+4. Reportar resultado cuando cierre la operación
+
+*📝 NOTAS PRUEBA MANUAL:*
+• Capital de prueba: $500
+• Día 1 de 14 días de prueba
+• Objetivo: 20-30 trades en 14 días
+• Win rate objetivo: >55%
+• Profit factor objetivo: >1.8
+• Ejecutar solo si estás de acuerdo con el riesgo

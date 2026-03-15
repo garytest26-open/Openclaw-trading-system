@@ -1,0 +1,36 @@
+Start                     2025-02-10 02:00...
+End                       2026-02-14 23:00...
+Duration                    369 days 21:00:00
+Exposure Time [%]                    36.14601
+Equity Final [$]                 198541.94395
+Equity Peak [$]                  226316.99029
+Commissions [$]                   42093.33041
+Return [%]                           -0.72903
+Buy & Hold Return [%]               -27.10653
+Return (Ann.) [%]                    -0.73102
+Volatility (Ann.) [%]                20.16375
+CAGR [%]                             -0.71945
+Sharpe Ratio                         -0.03625
+Sortino Ratio                        -0.06834
+Calmar Ratio                         -0.03971
+Alpha [%]                             -3.8757
+Beta                                 -0.11609
+Max. Drawdown [%]                   -18.40906
+Avg. Drawdown [%]                    -3.16539
+Max. Drawdown Duration      280 days 00:00:00
+Avg. Drawdown Duration       24 days 08:00:00
+# Trades                                  142
+Win Rate [%]                         28.87324
+Best Trade [%]                        14.3521
+Worst Trade [%]                      -1.63646
+Avg. Trade [%]                       -0.00494
+Max. Trade Duration           9 days 10:00:00
+Avg. Trade Duration           0 days 19:00:00
+Profit Factor                          1.0255
+Expectancy [%]                        0.01659
+SQN                                  -0.04491
+Kelly Criterion                      -0.00352
+_strategy                 DonchianBreakoutBTC
+_equity_curve                             ...
+_trades                        Size  Entry...
+dtype: object

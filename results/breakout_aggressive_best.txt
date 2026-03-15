@@ -1,0 +1,40 @@
+Resultados Optimización AGRESIVA 15m (60 Días):
+Start                     2025-11-05 14:30...
+End                       2026-02-02 20:45...
+Duration                     89 days 06:15:00
+Exposure Time [%]                    69.66146
+Equity Final [$]                  11231.38895
+Equity Peak [$]                   11236.99317
+Commissions [$]                      62.19888
+Return [%]                           12.31389
+Buy & Hold Return [%]                 2.42047
+Return (Ann.) [%]                     62.8623
+Volatility (Ann.) [%]                22.66629
+CAGR [%]                             38.79818
+Sharpe Ratio                          2.77338
+Sortino Ratio                         7.52365
+Calmar Ratio                         10.03384
+Alpha [%]                            10.67361
+Beta                                  0.67767
+Max. Drawdown [%]                    -6.26503
+Avg. Drawdown [%]                    -0.41968
+Max. Drawdown Duration       22 days 23:15:00
+Avg. Drawdown Duration        1 days 16:34:00
+# Trades                                    6
+Win Rate [%]                            100.0
+Best Trade [%]                        4.59768
+Worst Trade [%]                       0.38581
+Avg. Trade [%]                        2.01179
+Max. Trade Duration          27 days 22:45:00
+Avg. Trade Duration          10 days 08:55:00
+Profit Factor                             NaN
+Expectancy [%]                         2.0212
+SQN                                   3.44086
+Kelly Criterion                           NaN
+_strategy                 DonchianBreakout...
+_equity_curve                             ...
+_trades                      Size  EntryBa...
+dtype: object
+
+Mejores Parámetros:
+{'lookback': 37, 'exit_lookback': 2, 'atr_stop_mult': 1.0}

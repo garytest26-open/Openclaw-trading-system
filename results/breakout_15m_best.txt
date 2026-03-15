@@ -1,0 +1,40 @@
+Resultados Optimización 15m (60 Días):
+Start                     2025-11-05 14:30...
+End                       2026-02-02 20:45...
+Duration                     89 days 06:15:00
+Exposure Time [%]                     67.1875
+Equity Final [$]                  10220.94104
+Equity Peak [$]                   10234.83353
+Commissions [$]                      19.93884
+Return [%]                            2.20941
+Buy & Hold Return [%]                 0.96919
+Return (Ann.) [%]                     9.61291
+Volatility (Ann.) [%]                13.93834
+CAGR [%]                                6.364
+Sharpe Ratio                          0.68967
+Sortino Ratio                         1.03153
+Calmar Ratio                          1.52659
+Alpha [%]                             1.57333
+Beta                                   0.6563
+Max. Drawdown [%]                    -6.29699
+Avg. Drawdown [%]                    -1.12372
+Max. Drawdown Duration       42 days 21:30:00
+Avg. Drawdown Duration        6 days 09:11:00
+# Trades                                    2
+Win Rate [%]                            100.0
+Best Trade [%]                        1.12775
+Worst Trade [%]                       1.10189
+Avg. Trade [%]                        1.11482
+Max. Trade Duration          57 days 01:00:00
+Avg. Trade Duration          30 days 13:45:00
+Profit Factor                             NaN
+Expectancy [%]                        1.11482
+SQN                                  83.94135
+Kelly Criterion                           NaN
+_strategy                 DonchianBreakout...
+_equity_curve                             ...
+_trades                      Size  EntryBa...
+dtype: object
+
+Mejores Parámetros:
+{'lookback': 90, 'exit_lookback': 5, 'atr_stop_mult': 1.0}

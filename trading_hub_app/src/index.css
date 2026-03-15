@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=Inter:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-brand-primary: #0a0a0c;
+  --color-brand-secondary: #121418;
+  --color-brand-elevated: #1a1d24;
+  --color-brand-border: #272a32;
+  --color-brand-text: #e2e8f0;
+  --color-brand-text-muted: #838a9b;
+  --color-brand-accent-green: #16a34a;
+  --color-brand-accent-red: #dc2626;
+  --color-brand-accent-blue: #2563eb;
+  --color-brand-accent-yellow: #ca8a04;
+  --font-mono: 'JetBrains Mono', monospace;
+  --font-sans: 'Inter', sans-serif;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-brand-primary);
+    color: var(--color-brand-text);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Utilidad extra para los números en toda la app */
+  .data-value {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+    letter-spacing: -0.02em;
+  }
+}

@@ -1,0 +1,55 @@
+# Explicación Detallada: Estrategia Donchian Breakout (Agresiva)
+
+Esta estrategia está diseñada para operar en el índice **Nasdaq-100 (QQQ)** utilizando un marco de tiempo de **15 minutos**. Su objetivo es capturar movimientos explosivos de precio (rupturas o "breakouts") y salir rápidamente para asegurar ganancias.
+
+## 1. Filosofía de "Ruptura" (Breakout)
+La lógica principal se basa en que, cuando el precio rompe un máximo o mínimo reciente significativo, tiende a continuar moviéndose en esa dirección con fuerza e inercia durante un corto periodo.
+
+## 2. Indicadores Utilizados
+
+### A. Canal Donchian (37 Periodos)
+Este indicador dibuja dos líneas:
+- **Línea Superior (Techo):** El precio más alto alcanzado en las últimas 37 velas (aprox. 9 horas de mercado).
+- **Línea Inferior (Suelo):** El precio más bajo alcanzado en las últimas 37 velas.
+
+### B. ATR (Average True Range)
+Mide la volatilidad (cuánto se mueve el precio en promedio). Lo usamos para calcular el tamaño del Stop Loss inicial.
+
+## 3. Reglas de Entrada (¿Cuándo compramos?)
+
+### COMPRA (Long)
+- **Condición:** El precio actual supera el **Techo** del Canal Donchian (rompe el máximo de las últimas 9 horas).
+- **Significado:** El mercado está mostrando una fuerza compradora inusual. Entramos a favor de la tendencia.
+
+### VENTA CORTA (Short)
+- **Condición:** El precio actual cae por debajo del **Suelo** del Canal Donchian.
+- **Significado:** El soporte se ha roto y esperamos una caída rápida.
+
+## 4. Reglas de Salida (¿Cuándo vendemos?)
+
+Esta es la parte "Agresiva" de la estrategia. En lugar de esperar a que la tendencia cambie completamente, buscamos salir en cuanto el precio muestra el primer signo de debilidad.
+
+### A. Trailing Stop Dinámico (Salida Técnica)
+Utilizamos un canal muy estrecho de solo **2 periodos** para la salida.
+- **En Compra:** Si el precio cierra por debajo del **mínimo de las últimas 2 velas**, cerramos la operación.
+- **En Venta:** Si el precio cierra por encima del **máximo de las últimas 2 velas**, cerramos la operación.
+
+**¿Por qué tan corto?**
+Al operar en 15 minutos, los movimientos suelen ser rápidos. Un "retroceso" de 2 velas a menudo indica que el impulso se acabó. Salir aquí asegura que nos quedamos con gran parte de la ganancia obtenida durante la explosión inicial.
+
+### B. Stop Loss de Protección (Hard Stop)
+En el momento de entrar, colocamos un Stop Loss fijo basado en la volatilidad:
+- **Distancia:** 1.0 veces el ATR.
+- **Función:** Protegernos en caso de que la ruptura sea falsa y el precio se gire violentamente en nuestra contra nada más entrar.
+
+## 5. Resumen de Parámetros Óptimos
+Estos valores fueron encontrados mediante optimización computacional sobre datos recientes:
+
+- **Lookback (Entrada): 37**. (Equilibrio entre esperar suficiente confirmación y no entrar demasiado tarde).
+- **Exit Lookback (Salida): 2**. (Prioridad máxima: proteger ganancias).
+- **ATR Multiplier: 1.0**. (Stop Loss ajustado).
+
+## 6. Rendimiento Esperado
+Esta configuración es de **Alta Frecuencia** relativa:
+- **Frecuencia:** Espera entre 2 y 5 operaciones al mes (selecciona solo las mejores rupturas).
+- **Efectividad:** Históricamente ha tenido una tasa de acierto muy alta (>80%) porque las salidas rápidas evitan que una operación ganadora se convierta en perdedora.

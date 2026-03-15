@@ -1,0 +1,80 @@
+================================================================================
+PRESUPUESTO DE ACTUALIZACIÓN DE HARDWARE - ESTACIÓN IA Y ALGO-TRADING
+================================================================================
+Fecha de Emisión: Marzo 2026
+
+--------------------------------------------------------------------------------
+OPCIÓN A: POTENCIAR TU PC ACTUAL (LA MEJOR PARA "CREAR" INTELIGENCIA ARTIFICIAL)
+--------------------------------------------------------------------------------
+> Gráfica IA (RTX 3060 12GB)  : ~$285.00 USD
+> Kit RAM 32GB (2x16GB DDR4)  : ~$60.00  USD
+> Fuente Poder 600W 80+ Bronze: ~$55.00  USD
+================================================================================
+TOTAL ESTIMADO OPCIÓN A       : ~$400.00 USD (Aprox. 390-410 €)
+--------------------------------------------------------------------------------
+Ventajas: Entrenas bots (PyTorch/Tensorflow) en minutos. Tienes CUDA Cores puros.
+Corres Modelos de Lenguaje (LLMs de 8B o 14B) a gran velocidad.
+Desventajas: Un PC de torre gasta más luz (electricidad) si se deja prendido 24/7.
+
+
+--------------------------------------------------------------------------------
+OPCIÓN B: COMPRAR UN MINI-PC NUEVO (EL "SERVIDOR 24/7" SILENCIOSO)
+--------------------------------------------------------------------------------
+Si quieres una máquina dedicada, minúscula, que no gaste casi electricidad y que 
+pueda correr Openclaw día y noche sin inmutarse, así como modelos LLM locales.
+
+Recomendación Directa: Beelink SER8 o Minisforum UM780 XTX
+- Procesador: AMD Ryzen 7 8845HS o 7840HS (Potente CPU con NPU de IA integrada).
+- RAM: 32GB DDR5 a 5600MHz (Memoria rapidísima, vital para cargar el LLM local).
+- Almacenamiento: 1TB NVMe PCIe 4.0.
+- Gráficos: Radeon 780M Integrada.
+
+💸 Precio Aproximado del Mini-PC (Ya ensamblado): ~$500.00 - $600.00 USD (Aprox. 490-590 €)
+
+Ventajas de la Opción B (Mini-PC):
+1. Servidor 24/7 de bajo coste: Solo gasta entre 15W y 54W de energía. Puedes 
+   dejar a tu Sindicato Alpha Nexus operando criptomonedas por meses sin que te
+   llegue una factura de luz cara.
+2. RAM Extra Rápida: Los 32GB de DDR5 permiten cargar Modelos de Lenguaje (LLM) 
+   como Llama-3 (8B) o Mistral perfectamente de forma local.
+
+Desventajas de la Opción B (Mini-PC):
+1. Pésimo para "Entrenar" Bots: Al no tener una tarjeta NVIDIA (Cuda Cores), 
+   entrenar nuevos agentes PPO o generar las redes GAN te va a tardar horas 
+   usando solo el Procesador (CPU), mientras que la RTX 3060 de la Opción A lo 
+   hace en minutos.
+
+
+--------------------------------------------------------------------------------
+OPCIÓN C (RECOMENDADA): EL MODELO HÍBRIDO INSTITUCIONAL (MINI-PC + CLOUD GPU)
+--------------------------------------------------------------------------------
+Esta es la arquitectura "Perfecta" que usan los fondos cuantitativos (Prop Firms). 
+Consiste en comprar el Mini-PC (Opción B) para tenerlo en tu escritorio gestionando 
+Openclaw 24/7 sin ruido ni gasto de luz, pero cuando necesites GAN o PPO pesado,
+alquilas una Supercomputadora en la Nube (AWS, RunPod, Vast.ai) por horas.
+
+¿Cuánto cuesta el alquiler de la Nube Mensualmente por "Flujo Constante"?
+Si utilizas proveedores comunitarios/Cloud for AI (ej: RunPod o Vast.ai):
+- Alquilar una RTX 3090 o RTX 4090 (Poder bestial de 24GB VRAM) cuesta en 
+  promedio $0.30 a $0.40 centavos de dólar LA HORA.
+  
+Escenario de Gasto Mensual (Entrenamiento Frecuente):
+Supongamos que re-entrenas todos tus agentes de tu Sindicato Nexus 3 veces a la 
+semana, y cada entrenamiento te toma 4 horas en completarse en la nube.
+- 12 horas a la semana x 4 semanas = 48 horas de GPU pura al mes.
+- 48 horas x $0.35/hora = ~$16.80 USD al mes.
+
+Gasto Total Híbrido: Inversión Inicial ~$550 (Mini-PC) + Gasto Operativo ~$15-$20/mes.
+
+================================================================================
+VEREDICTO DEFINITIVO DE INVERSIÓN
+================================================================================
+Si te lo puedes permitir, LA OPCIÓN C (Híbrida) es el Santo Grial.
+1. Tienes un Mini-PC local con 32GB RAM DDR5 que corre Llama-3/Mistral excelente 
+   para ayudarte a codear y mantiene Openclaw abriendo posiciones de Trading en 
+   el mercado sin crasheos y apagones.
+2. Mantienes tu casa sin calor y sin ruido de ventiladores de GPU gigantes.
+3. Entrenas en la nube a una velocidad 3 veces superior a la Opción A, pagando 
+   solo por los minutos que uses (literalmente como pagar una suscripción de 
+   Spotify al mes ~15$). Una vez el ".pth" esté entrenado, lo descargas a tu 
+   Mini-PC y apagas la nube.

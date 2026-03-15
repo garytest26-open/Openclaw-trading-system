@@ -1,0 +1,5 @@
+Configuración,Entry,Exit,ATR,Retorno %,Trades,Win Rate %,Sharpe,Max DD %,Profit Factor,Capital Final
+Original (No Optimizado),20,10,2.0,-10.34,9,22.2,-0.64,-13.36,0.64,"$8,966"
+Mejor Sharpe (#67),10,3,2.0,6.22,15,53.3,0.32,-11.92,1.43,"$10,622"
+Mejor Return (#51),5,15,0.5,6.17,16,6.2,0.38,-11.89,1.43,"$10,617"
+Alta Win Rate (#69),10,3,2.5,5.23,15,53.3,0.27,-12.29,1.35,"$10,523"

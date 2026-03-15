@@ -1,0 +1,51 @@
+PARAMETROS OPTIMOS - ESTRATEGIA NASDAQ
+============================================================
+
+Fecha de optimizacion: 2026-02-04 19:50:57
+
+lookback_entry = 7
+lookback_exit = 15
+atr_multiplier = 1.2
+ma_period = 50
+use_trend_filter = False
+
+============================================================
+METRICAS
+============================================================
+
+Start                     2025-02-04 00:00:00
+End                       2026-02-04 00:00:00
+Duration                    365 days 00:00:00
+Exposure Time [%]                     73.4127
+Equity Final [$]                  12201.04249
+Equity Peak [$]                   13552.78262
+Commissions [$]                      95.59713
+Return [%]                           22.01042
+Buy & Hold Return [%]                32.08914
+Return (Ann.) [%]                    22.01042
+Volatility (Ann.) [%]                15.47867
+CAGR [%]                             14.72271
+Sharpe Ratio                          1.42198
+Sortino Ratio                         2.61192
+Calmar Ratio                          1.90237
+Alpha [%]                            13.38882
+Beta                                  0.26868
+Max. Drawdown [%]                   -11.57001
+Avg. Drawdown [%]                    -1.55622
+Max. Drawdown Duration       98 days 00:00:00
+Avg. Drawdown Duration       11 days 00:00:00
+# Trades                                    4
+Win Rate [%]                             25.0
+Best Trade [%]                       27.92431
+Worst Trade [%]                      -2.52263
+Avg. Trade [%]                        4.72598
+Max. Trade Duration         208 days 00:00:00
+Avg. Trade Duration          67 days 00:00:00
+Profit Factor                         4.58726
+Expectancy [%]                        5.45924
+SQN                                   0.66592
+Kelly Criterion                       0.18184
+_strategy                 OptimizedBreakou...
+_equity_curve                             ...
+_trades                      Size  EntryBa...
+dtype: object
