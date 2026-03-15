@@ -1,0 +1,40 @@
+{
+  "name": "Dynamic_Weighted_Consensus_v2",
+  "description": "Adaptive consensus system that adjusts weights based on performance and market conditions",
+  "weight_calculation": {
+    "base_weights": {
+      "trend_agent": 0.2,
+      "reversal_agent": 0.15,
+      "volatility_agent": 0.15,
+      "momentum_agent": 0.25,
+      "breakout_agent": 0.15,
+      "regime_agent": 0.1
+    },
+    "performance_adjustment": {
+      "lookback_period": 50,
+      "accuracy_weight": 0.4,
+      "profit_weight": 0.4,
+      "consistency_weight": 0.2,
+      "max_adjustment": 0.3
+    },
+    "market_adjustment": {
+      "regime_based": true,
+      "volatility_adjustment": true,
+      "trend_strength_adjustment": true,
+      "correlation_adjustment": true
+    }
+  },
+  "signal_processing": {
+    "confidence_threshold": 0.65,
+    "agreement_threshold": 0.6,
+    "conflict_resolution": "weighted_vote",
+    "uncertainty_handling": "reduce_position_size"
+  },
+  "position_sizing": {
+    "kelly_criterion": true,
+    "confidence_multiplier": true,
+    "volatility_adjustment": true,
+    "portfolio_correlation": true,
+    "maximum_leverage": 3.0
+  }
+}

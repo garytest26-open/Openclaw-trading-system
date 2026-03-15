@@ -1,0 +1,49 @@
+{
+  "trader_profile": {
+    "name": "FRAN",
+    "experience_level": "",
+    "preferred_markets": [],
+    "preferred_timeframes": [],
+    "trading_style": "",
+    "risk_tolerance": ""
+  },
+  "broker_configs": {
+    "primary_broker": {
+      "name": "",
+      "platform": "",
+      "api_available": false,
+      "api_keys": {
+        "api_key": "SET_IN_ENV_VARS",
+        "api_secret": "SET_IN_ENV_VARS"
+      }
+    },
+    "secondary_brokers": []
+  },
+  "strategy_parameters": {
+    "max_position_size_percent": 2,
+    "max_daily_loss_percent": 5,
+    "max_drawdown_percent": 15,
+    "min_risk_reward_ratio": 1.5,
+    "default_stop_loss_percent": 1,
+    "default_take_profit_percent": 2
+  },
+  "execution_settings": {
+    "paper_trading": true,
+    "live_trading": false,
+    "auto_execution": false,
+    "require_confirmation": true,
+    "notification_channels": ["telegram"]
+  },
+  "monitoring": {
+    "heartbeat_interval_minutes": 30,
+    "market_hours_only": false,
+    "alert_on_signals": true,
+    "alert_on_executions": true,
+    "alert_on_errors": true
+  },
+  "technical_analysis": {
+    "preferred_indicators": [],
+    "custom_indicators": [],
+    "machine_learning_enabled": false
+  }
+}

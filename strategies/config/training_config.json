@@ -1,0 +1,104 @@
+{
+  "training_parameters": {
+    "epochs": 100,
+    "batch_size": 32,
+    "learning_rate": 0.001,
+    "validation_split": 0.2,
+    "early_stopping_patience": 10,
+    "save_best_only": true
+  },
+  "data_parameters": {
+    "symbols": ["BTC-USD", "ETH-USD", "SOL-USD"],
+    "years": 3,
+    "interval": "1d",
+    "start_date": "auto",
+    "end_date": "now",
+    "data_source": "yfinance",
+    "cache_data": true,
+    "cache_directory": "trading/swarm_ai/data/cache"
+  },
+  "feature_engineering": {
+    "technical_indicators": true,
+    "advanced_features": true,
+    "normalization": "standard",
+    "sequence_length": 50,
+    "feature_count": 150,
+    "include_volume_features": true,
+    "include_volatility_features": true,
+    "include_momentum_features": true,
+    "include_trend_features": true
+  },
+  "agent_specific": {
+    "trend_agent": {
+      "architecture": "lstm_attention",
+      "hidden_size": 128,
+      "num_layers": 2,
+      "dropout": 0.2,
+      "attention_heads": 4,
+      "sequence_length": 50,
+      "output_classes": 3
+    },
+    "reversal_agent": {
+      "architecture": "cnn",
+      "conv_layers": [64, 128, 256],
+      "kernel_sizes": [3, 5, 7],
+      "pooling": "max",
+      "dropout": 0.3,
+      "output_classes": 3
+    },
+    "volatility_agent": {
+      "architecture": "vae",
+      "encoder_layers": [128, 64, 32],
+      "decoder_layers": [32, 64, 128],
+      "latent_dim": 16,
+      "dropout": 0.2,
+      "regime_classes": 3
+    },
+    "volume_agent": {
+      "architecture": "transformer",
+      "enabled": false,
+      "note": "Implementation pending"
+    },
+    "sentiment_agent": {
+      "architecture": "bert_lstm",
+      "enabled": false,
+      "note": "Implementation pending"
+    }
+  },
+  "training_optimization": {
+    "use_gpu": true,
+    "mixed_precision": false,
+    "gradient_clipping": 1.0,
+    "weight_decay": 0.0001,
+    "scheduler": "reduce_on_plateau",
+    "scheduler_patience": 5,
+    "scheduler_factor": 0.5
+  },
+  "output_configuration": {
+    "model_directory": "trading/swarm_ai/models",
+    "log_directory": "trading/swarm_ai/logs",
+    "tensorboard_logs": false,
+    "save_checkpoints": true,
+    "checkpoint_frequency": 10,
+    "generate_report": true,
+    "report_format": "json"
+  },
+  "validation_metrics": {
+    "primary_metric": "accuracy",
+    "secondary_metrics": ["precision", "recall", "f1", "auc"],
+    "confusion_matrix": true,
+    "classification_report": true,
+    "plot_training_history": true
+  },
+  "hyperparameter_tuning": {
+    "enabled": false,
+    "method": "random_search",
+    "n_iter": 20,
+    "param_distributions": {
+      "learning_rate": [0.001, 0.0005, 0.0001],
+      "batch_size": [16, 32, 64],
+      "dropout": [0.1, 0.2, 0.3]
+    }
+  },
+  "notes": "Training configuration for Swarm Trading AI. This configures the training of neural agents with 3 years of BTC, ETH, SOL data for 100 epochs."
+}

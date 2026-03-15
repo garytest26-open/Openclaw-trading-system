@@ -1,0 +1,184 @@
+{
+  "system_config": {
+    "name": "SwarmTradingAI_FRAN",
+    "version": "1.0.0",
+    "environment": "testnet",
+    "trading_mode": "paper_trading",
+    "max_agents": 10,
+    "min_agents": 5,
+    "consensus_threshold": 0.65,
+    "update_frequency_minutes": 5
+  },
+  "market_config": {
+    "primary_market": "cryptocurrencies",
+    "exchange": "hyperliquid",
+    "symbols": ["BTC", "ETH", "SOL", "AVAX", "DOT", "LINK", "UNI", "AAVE"],
+    "timeframes": ["1m", "5m", "15m", "1h", "4h"],
+    "primary_timeframe": "5m",
+    "lookback_window": 100,
+    "forecast_horizon": 10
+  },
+  "agent_configs": {
+    "trend_agent": {
+      "enabled": true,
+      "architecture": "bilstm_attention",
+      "hidden_size": 128,
+      "num_layers": 3,
+      "dropout": 0.2,
+      "learning_rate": 0.001,
+      "batch_size": 64,
+      "sequence_length": 50,
+      "features": ["close", "returns", "log_returns", "volatility", "momentum"]
+    },
+    "reversal_agent": {
+      "enabled": true,
+      "architecture": "cnn_1d",
+      "filters": [32, 64, 128],
+      "kernel_sizes": [3, 5, 7],
+      "pooling": "max",
+      "learning_rate": 0.001,
+      "batch_size": 64,
+      "input_channels": 10,
+      "features": ["rsi", "stochastic", "williams_r", "cci", "roc"]
+    },
+    "volatility_agent": {
+      "enabled": true,
+      "architecture": "vae",
+      "latent_dim": 16,
+      "hidden_dims": [64, 32],
+      "learning_rate": 0.0005,
+      "batch_size": 32,
+      "beta": 0.1,
+      "features": ["atr", "bb_width", "keltner_width", "historical_vol", "parkinson_vol"]
+    },
+    "volume_agent": {
+      "enabled": true,
+      "architecture": "transformer",
+      "d_model": 64,
+      "nhead": 4,
+      "num_layers": 3,
+      "learning_rate": 0.0005,
+      "batch_size": 32,
+      "features": ["volume", "volume_ratio", "obv", "vwap", "money_flow"]
+    },
+    "sentiment_agent": {
+      "enabled": true,
+      "architecture": "bert_lstm",
+      "bert_model": "distilbert-base-uncased",
+      "lstm_hidden": 64,
+      "learning_rate": 0.0001,
+      "batch_size": 16,
+      "max_seq_length": 128,
+      "data_sources": ["news", "twitter", "reddit", "on_chain"]
+    }
+  },
+  "swarm_config": {
+    "consensus_method": "weighted_voting",
+    "voting_weights": {
+      "trend_agent": 0.25,
+      "reversal_agent": 0.20,
+      "volatility_agent": 0.15,
+      "volume_agent": 0.20,
+      "sentiment_agent": 0.20
+    },
+    "confidence_calculation": "adaptive",
+    "min_confidence": 0.6,
+    "max_disagreement": 0.3,
+    "evolutionary_optimization": {
+      "enabled": true,
+      "population_size": 20,
+      "generations": 50,
+      "mutation_rate": 0.1,
+      "crossover_rate": 0.7,
+      "selection_method": "tournament"
+    },
+    "reinforcement_learning": {
+      "enabled": true,
+      "algorithm": "ppo",
+      "gamma": 0.99,
+      "lambda": 0.95,
+      "clip_ratio": 0.2,
+      "entropy_coef": 0.01
+    }
+  },
+  "fusion_network": {
+    "enabled": true,
+    "architecture": "deep_mlp",
+    "hidden_layers": [256, 128, 64, 32],
+    "dropout": 0.3,
+    "learning_rate": 0.0005,
+    "batch_size": 32,
+    "activation": "leaky_relu",
+    "use_skip_connections": true,
+    "meta_learning": {
+      "enabled": true,
+      "inner_lr": 0.01,
+      "outer_lr": 0.001,
+      "adaptation_steps": 5
+    }
+  },
+  "training_config": {
+    "data_split": {
+      "train": 0.7,
+      "validation": 0.15,
+      "test": 0.15
+    },
+    "epochs": 100,
+    "early_stopping_patience": 20,
+    "checkpoint_frequency": 10,
+    "use_pretrained": true,
+    "pretrained_models_path": "models/pretrained/",
+    "online_learning": {
+      "enabled": true,
+      "update_frequency_hours": 24,
+      "forgetting_factor": 0.99
+    }
+  },
+  "risk_management": {
+    "position_sizing": "kelly_optimal",
+    "max_position_size_percent": 2,
+    "max_portfolio_risk_percent": 15,
+    "stop_loss_method": "atr_based",
+    "stop_loss_multiplier": 2.0,
+    "take_profit_ratio": 2.0,
+    "max_drawdown_limit": 20,
+    "var_confidence": 0.95,
+    "cvar_confidence": 0.99
+  },
+  "execution_config": {
+    "slippage_model": "proportional",
+    "max_slippage_percent": 0.1,
+    "execution_delay_ms": 100,
+    "order_type": "limit",
+    "use_twap": false,
+    "twap_duration_minutes": 5,
+    "notification_channels": ["telegram", "logs", "dashboard"]
+  },
+  "monitoring_config": {
+    "metrics_tracking": {
+      "sharpe_ratio": true,
+      "sortino_ratio": true,
+      "calmar_ratio": true,
+      "max_drawdown": true,
+      "win_rate": true,
+      "profit_factor": true,
+      "recovery_factor": true
+    },
+    "agent_performance": {
+      "track_individual": true,
+      "track_correlation": true,
+      "diversity_metrics": true
+    },
+    "logging": {
+      "level": "INFO",
+      "file": "logs/swarm_trading.log",
+      "rotation": "daily",
+      "retention_days": 30
+    },
+    "dashboard": {
+      "enabled": true,
+      "port": 8050,
+      "update_interval_seconds": 30
+    }
+  }
+}

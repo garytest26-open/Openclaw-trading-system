@@ -1,0 +1,36 @@
+{
+  "signal_id": "SIG-20260309-1023-001",
+  "timestamp": "2026-03-09T10:23:38.398881",
+  "asset": "BTC",
+  "signal_type": "TREND_FOLLOWING",
+  "direction": "LONG",
+  "entry_price": 51263.43,
+  "stop_loss": 50313.63,
+  "take_profits": [
+    52032.38,
+    53057.65,
+    54851.87
+  ],
+  "position_size_usd": 4.49,
+  "position_size_pct": 0.9,
+  "confidence": 0.8,
+  "risk_reward_ratio": 0.81,
+  "market_conditions": {
+    "trend_strength": 0.74,
+    "volatility_pct": 1.85,
+    "volume_ratio": 1.22
+  },
+  "risk_management": {
+    "max_loss_usd": 0.08,
+    "max_loss_pct": 1.85,
+    "daily_loss_limit": "3% ($15)",
+    "weekly_loss_limit": "8% ($40)",
+    "max_drawdown_limit": "15% ($75)"
+  },
+  "testing_info": {
+    "capital": 500,
+    "test_day": 1,
+    "total_signals_today": 1,
+    "mode": "controlled"
+  }
+}

@@ -1,0 +1,503 @@
+{
+  "backtest_date": "2026-03-10T03:10:41.297696",
+  "backtest_period_years": 2,
+  "symbols_tested": [
+    "BTC",
+    "ETH",
+    "SOL"
+  ],
+  "portfolio_summary": {
+    "total_initial_capital": 30000,
+    "total_final_capital": 39630.046109003044,
+    "portfolio_return_percent": 32.10015369667681,
+    "average_return_percent": 32.10015369667683
+  },
+  "detailed_results": {
+    "BTC": {
+      "initial_capital": 10000,
+      "final_capital": 5354.665953064006,
+      "total_return_percent": -46.45334046935994,
+      "total_trades": 70,
+      "win_rate": 70.0,
+      "trend_signals": [
+        "HOLD",
+        "BUY",
+        "BUY",
+        "BUY",
+        "BUY",
+        "HOLD",
+        "SELL",
+        "SELL",
+        "BUY",
+        "HOLD",
+        "SELL",
+        "SELL",
+        "SELL",
+        "SELL",
+        "SELL",
+        "SELL",
+        "SELL",
+        "HOLD",
+        "SELL",
+        "HOLD"
+      ],
+      "reversal_signals": [
+        "BUY",
+        "BUY",
+        "BUY",
+        "BUY",
+        "SELL",
+        "HOLD",
+        "BUY",
+        "BUY",
+        "SELL",
+        "BUY",
+        "BUY",
+        "HOLD",
+        "BUY",
+        "SELL",
+        "BUY",
+        "BUY",
+        "HOLD",
+        "SELL",
+        "SELL",
+        "SELL"
+      ],
+      "consensus_signals": [
+        "BUY",
+        "BUY",
+        "BUY",
+        "BUY",
+        "HOLD",
+        "HOLD",
+        "HOLD",
+        "HOLD",
+        "HOLD",
+        "BUY",
+        "HOLD",
+        "SELL",
+        "HOLD",
+        "SELL",
+        "HOLD",
+        "HOLD",
+        "SELL",
+        "SELL",
+        "SELL",
+        "SELL"
+      ],
+      "volatility_regimes": [
+        "MEDIUM",
+        "HIGH",
+        "LOW",
+        "HIGH",
+        "MEDIUM",
+        "MEDIUM",
+        "HIGH",
+        "HIGH",
+        "LOW",
+        "LOW",
+        "HIGH",
+        "LOW",
+        "LOW",
+        "LOW",
+        "MEDIUM",
+        "HIGH",
+        "LOW",
+        "HIGH",
+        "MEDIUM",
+        "LOW"
+      ],
+      "trades": [
+        {
+          "date": "2026-02-11 03:10:32.812349",
+          "action": "SELL",
+          "price": 44271.4358760939,
+          "position": 0,
+          "pnl": -3390.4508829681427
+        },
+        {
+          "date": "2026-02-15 03:10:32.812349",
+          "action": "BUY",
+          "price": 47729.07979359639,
+          "position": 0.13848054782565977
+        },
+        {
+          "date": "2026-02-22 03:10:32.812349",
+          "action": "SELL",
+          "price": 45165.245600454335,
+          "position": 0,
+          "pnl": -3745.4920465686137
+        },
+        {
+          "date": "2026-02-23 03:10:32.812349",
+          "action": "BUY",
+          "price": 44343.7414067918,
+          "position": 0.1410460135976129
+        },
+        {
+          "date": "2026-02-24 03:10:32.812349",
+          "action": "SELL",
+          "price": 44612.18802537306,
+          "position": 0,
+          "pnl": -3707.6287211539675
+        },
+        {
+          "date": "2026-02-25 03:10:32.812349",
+          "action": "BUY",
+          "price": 45024.71740598169,
+          "position": 0.13975370954821517
+        },
+        {
+          "date": "2026-02-27 03:10:32.812349",
+          "action": "SELL",
+          "price": 43720.94177918807,
+          "position": 0,
+          "pnl": -3889.8362014169243
+        },
+        {
+          "date": "2026-02-28 03:10:32.812349",
+          "action": "BUY",
+          "price": 43758.28856133485,
+          "position": 0.13963443268624684
+        },
+        {
+          "date": "2026-03-02 03:10:32.812349",
+          "action": "SELL",
+          "price": 43894.371088115855,
+          "position": 0,
+          "pnl": -3870.834394991347
+        },
+        {
+          "date": "2026-03-05 03:10:32.812349",
+          "action": "BUY",
+          "price": 44268.67567414971,
+          "position": 0.13845378276332138
+        }
+      ]
+    },
+    "ETH": {
+      "initial_capital": 10000,
+      "final_capital": 8122.981114119742,
+      "total_return_percent": -18.770188858802577,
+      "total_trades": 79,
+      "win_rate": 7.59493670886076,
+      "trend_signals": [
+        "SELL",
+        "HOLD",
+        "HOLD",
+        "HOLD",
+        "BUY",
+        "BUY",
+        "BUY",
+        "HOLD",
+        "BUY",
+        "SELL",
+        "SELL",
+        "SELL",
+        "SELL",
+        "SELL",
+        "SELL",
+        "SELL",
+        "SELL",
+        "SELL",
+        "SELL",
+        "BUY"
+      ],
+      "reversal_signals": [
+        "BUY",
+        "BUY",
+        "HOLD",
+        "HOLD",
+        "SELL",
+        "SELL",
+        "SELL",
+        "SELL",
+        "BUY",
+        "BUY",
+        "BUY",
+        "BUY",
+        "SELL",
+        "SELL",
+        "HOLD",
+        "BUY",
+        "BUY",
+        "BUY",
+        "BUY",
+        "BUY"
+      ],
+      "consensus_signals": [
+        "HOLD",
+        "BUY",
+        "HOLD",
+        "HOLD",
+        "HOLD",
+        "HOLD",
+        "HOLD",
+        "SELL",
+        "BUY",
+        "HOLD",
+        "HOLD",
+        "HOLD",
+        "SELL",
+        "SELL",
+        "SELL",
+        "HOLD",
+        "HOLD",
+        "HOLD",
+        "HOLD",
+        "BUY"
+      ],
+      "volatility_regimes": [
+        "HIGH",
+        "LOW",
+        "LOW",
+        "LOW",
+        "HIGH",
+        "MEDIUM",
+        "HIGH",
+        "HIGH",
+        "HIGH",
+        "LOW",
+        "MEDIUM",
+        "MEDIUM",
+        "MEDIUM",
+        "LOW",
+        "LOW",
+        "LOW",
+        "LOW",
+        "LOW",
+        "LOW",
+        "MEDIUM"
+      ],
+      "trades": [
+        {
+          "date": "2026-01-21 03:10:32.874738",
+          "action": "SELL",
+          "price": 1447.7459617484187,
+          "position": 0,
+          "pnl": -2744.8195980405553
+        },
+        {
+          "date": "2026-01-27 03:10:32.874738",
+          "action": "BUY",
+          "price": 1442.579938678793,
+          "position": 5.029309092294881
+        },
+        {
+          "date": "2026-01-30 03:10:32.874738",
+          "action": "SELL",
+          "price": 1536.968071092532,
+          "position": 0,
+          "pnl": -2270.1125054874046
+        },
+        {
+          "date": "2026-02-05 03:10:32.874738",
+          "action": "BUY",
+          "price": 1522.0945918686382,
+          "position": 5.078454082819388
+        },
+        {
+          "date": "2026-02-18 03:10:32.874738",
+          "action": "SELL",
+          "price": 1651.8831164365902,
+          "position": 0,
+          "pnl": -1610.9874429921856
+        },
+        {
+          "date": "2026-02-26 03:10:32.874738",
+          "action": "BUY",
+          "price": 1551.006651469458,
+          "position": 5.408753437040311
+        },
+        {
+          "date": "2026-03-04 03:10:32.874738",
+          "action": "SELL",
+          "price": 1526.5886364220692,
+          "position": 0,
+          "pnl": -1743.0584658054504
+        },
+        {
+          "date": "2026-03-05 03:10:32.874738",
+          "action": "BUY",
+          "price": 1466.3322075729347,
+          "position": 5.631016962971437
+        },
+        {
+          "date": "2026-03-07 03:10:32.874738",
+          "action": "SELL",
+          "price": 1443.2798641720528,
+          "position": 0,
+          "pnl": -1872.86660253206
+        },
+        {
+          "date": "2026-03-08 03:10:32.874738",
+          "action": "BUY",
+          "price": 1459.500649953555,
+          "position": 5.568434243401375
+        }
+      ]
+    },
+    "SOL": {
+      "initial_capital": 10000,
+      "final_capital": 26152.3990418193,
+      "total_return_percent": 161.523990418193,
+      "total_trades": 85,
+      "win_rate": 92.94117647058823,
+      "trend_signals": [
+        "BUY",
+        "SELL",
+        "HOLD",
+        "HOLD",
+        "HOLD",
+        "HOLD",
+        "HOLD",
+        "HOLD",
+        "BUY",
+        "BUY",
+        "BUY",
+        "SELL",
+        "SELL",
+        "HOLD",
+        "SELL",
+        "SELL",
+        "SELL",
+        "HOLD",
+        "SELL",
+        "HOLD"
+      ],
+      "reversal_signals": [
+        "BUY",
+        "BUY",
+        "BUY",
+        "BUY",
+        "SELL",
+        "SELL",
+        "HOLD",
+        "SELL",
+        "BUY",
+        "BUY",
+        "BUY",
+        "BUY",
+        "BUY",
+        "HOLD",
+        "HOLD",
+        "SELL",
+        "HOLD",
+        "BUY",
+        "BUY",
+        "BUY"
+      ],
+      "consensus_signals": [
+        "BUY",
+        "HOLD",
+        "BUY",
+        "BUY",
+        "SELL",
+        "SELL",
+        "HOLD",
+        "SELL",
+        "BUY",
+        "BUY",
+        "BUY",
+        "HOLD",
+        "HOLD",
+        "HOLD",
+        "SELL",
+        "SELL",
+        "SELL",
+        "BUY",
+        "HOLD",
+        "BUY"
+      ],
+      "volatility_regimes": [
+        "MEDIUM",
+        "HIGH",
+        "HIGH",
+        "MEDIUM",
+        "LOW",
+        "LOW",
+        "LOW",
+        "LOW",
+        "MEDIUM",
+        "LOW",
+        "HIGH",
+        "HIGH",
+        "HIGH",
+        "MEDIUM",
+        "MEDIUM",
+        "MEDIUM",
+        "MEDIUM",
+        "HIGH",
+        "LOW",
+        "HIGH"
+      ],
+      "trades": [
+        {
+          "date": "2026-02-04 03:10:32.884872",
+          "action": "BUY",
+          "price": 584.2108067302834,
+          "position": 45.81615002995181
+        },
+        {
+          "date": "2026-02-08 03:10:32.884872",
+          "action": "SELL",
+          "price": 578.1845409597811,
+          "position": 0,
+          "pnl": 16490.189673612145
+        },
+        {
+          "date": "2026-02-11 03:10:32.884872",
+          "action": "BUY",
+          "price": 599.0742589339101,
+          "position": 44.218540988145755
+        },
+        {
+          "date": "2026-02-14 03:10:32.884872",
+          "action": "SELL",
+          "price": 592.9144729617085,
+          "position": 0,
+          "pnl": 16217.812925122143
+        },
+        {
+          "date": "2026-02-25 03:10:32.884872",
+          "action": "BUY",
+          "price": 502.84901668962505,
+          "position": 52.138538716293525
+        },
+        {
+          "date": "2026-02-26 03:10:32.884872",
+          "action": "SELL",
+          "price": 514.9194904679387,
+          "position": 0,
+          "pnl": 16847.149789536754
+        },
+        {
+          "date": "2026-02-28 03:10:32.884872",
+          "action": "BUY",
+          "price": 527.6106631112345,
+          "position": 50.88439576111571
+        },
+        {
+          "date": "2026-03-01 03:10:32.884872",
+          "action": "SELL",
+          "price": 514.52290745457,
+          "position": 0,
+          "pnl": 16181.187251078256
+        },
+        {
+          "date": "2026-03-03 03:10:32.884872",
+          "action": "BUY",
+          "price": 517.536599881737,
+          "position": 50.58808837299808
+        },
+        {
+          "date": "2026-03-06 03:10:32.884872",
+          "action": "SELL",
+          "price": 516.9675289762167,
+          "position": 0,
+          "pnl": 16152.399041819299
+        }
+      ]
+    }
+  }
+}

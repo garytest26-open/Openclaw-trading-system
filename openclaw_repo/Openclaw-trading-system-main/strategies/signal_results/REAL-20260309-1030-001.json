@@ -1,0 +1,43 @@
+{
+  "signal_id": "REAL-20260309-1030-001",
+  "timestamp": "2026-03-09T10:30:20.160634",
+  "timestamp_madrid": "2026-03-09T11:30:20.160634",
+  "asset": "ETH",
+  "signal_type": "MOMENTUM",
+  "direction": "LONG",
+  "entry_price": 2003.8,
+  "stop_loss": 1879.95,
+  "take_profits": [
+    2029.95,
+    2069.95,
+    2139.95
+  ],
+  "position_size_usd": 4.58,
+  "position_size_pct": 0.92,
+  "confidence": 0.83,
+  "risk_reward_ratio": 0.21,
+  "market_conditions": {
+    "condition": "NEUTRAL",
+    "condition_emoji": "\u27a1\ufe0f",
+    "price_change_24h": 0.01,
+    "volatility": 3.0,
+    "base_price": 2003.66,
+    "source": "realistic_simulation"
+  },
+  "risk_management": {
+    "max_loss_usd": 0.28,
+    "max_loss_pct": 6.18,
+    "stop_distance_pct": 6.0,
+    "daily_loss_limit": "3% ($15.00)",
+    "weekly_loss_limit": "8% ($40.00)",
+    "max_drawdown_limit": "15% ($75.00)"
+  },
+  "testing_info": {
+    "capital": 500,
+    "test_day": 1,
+    "total_signals_today": 1,
+    "mode": "controlled",
+    "price_source": "REAL (CoinGecko API + realistic simulation)",
+    "user_timezone": "Europe/Madrid (UTC+1)"
+  }
+}

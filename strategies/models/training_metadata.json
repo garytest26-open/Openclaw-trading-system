@@ -1,0 +1,16 @@
+{
+  "training_date": "2026-03-09T03:41:27.337207",
+  "epochs": 100,
+  "symbols": [
+    "BTC-USD",
+    "ETH-USD",
+    "SOL-USD"
+  ],
+  "data_years": 3,
+  "agents_trained": [
+    "trend",
+    "reversal",
+    "volatility"
+  ],
+  "training_time_seconds": 95.50886273384094
+}

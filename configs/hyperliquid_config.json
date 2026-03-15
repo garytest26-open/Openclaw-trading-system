@@ -1,0 +1,61 @@
+{
+  "trader_profile": {
+    "name": "FRAN",
+    "experience_level": "intermediate",
+    "preferred_markets": ["cryptocurrencies"],
+    "preferred_timeframes": ["1m", "5m", "15m", "1h"],
+    "trading_style": "day_trading",
+    "risk_tolerance": "medium"
+  },
+  "hyperliquid_config": {
+    "environment": "testnet",
+    "base_url": "https://api.hyperliquid-testnet.xyz",
+    "mainnet_url": "https://api.hyperliquid.xyz",
+    "wallet_address": "SET_IN_ENV_VARS",
+    "private_key": "SET_IN_ENV_VARS",
+    "test_funds": true,
+    "slippage_tolerance": 0.001
+  },
+  "trading_parameters": {
+    "max_position_size_usd": 1000,
+    "max_position_size_percent": 2,
+    "max_daily_loss_percent": 5,
+    "max_drawdown_percent": 15,
+    "min_risk_reward_ratio": 1.5,
+    "default_stop_loss_percent": 1,
+    "default_take_profit_percent": 2,
+    "max_open_positions": 3,
+    "cooldown_after_loss_minutes": 30
+  },
+  "execution_settings": {
+    "paper_trading": true,
+    "live_trading": false,
+    "auto_execution": false,
+    "require_confirmation": true,
+    "notification_channels": ["telegram"],
+    "execution_delay_ms": 100
+  },
+  "market_monitoring": {
+    "monitored_symbols": ["BTC", "ETH", "SOL", "ARB", "OP"],
+    "heartbeat_interval_minutes": 5,
+    "market_hours_only": false,
+    "alert_on_signals": true,
+    "alert_on_executions": true,
+    "alert_on_errors": true,
+    "volume_threshold_usd": 1000000
+  },
+  "strategy_config": {
+    "enabled_strategies": ["mean_reversion", "breakout", "momentum"],
+    "default_timeframe": "5m",
+    "backtest_period_days": 30,
+    "forward_test_period_days": 7,
+    "minimum_win_rate": 0.45,
+    "minimum_profit_factor": 1.2
+  },
+  "technical_analysis": {
+    "preferred_indicators": ["RSI", "MACD", "BB", "VWAP", "EMA"],
+    "custom_indicators": [],
+    "machine_learning_enabled": false,
+    "signal_confirmation": true
+  }
+}

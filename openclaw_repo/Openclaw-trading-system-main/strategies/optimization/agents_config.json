@@ -1,0 +1,125 @@
+{
+  "momentum_agent": {
+    "name": "Momentum_Agent_v2",
+    "type": "LSTM_CNN_Hybrid",
+    "purpose": "Detect price acceleration and momentum shifts",
+    "features": [
+      "rate_of_change_5",
+      "rate_of_change_10",
+      "rate_of_change_20",
+      "acceleration_5",
+      "acceleration_10",
+      "momentum_ratio",
+      "velocity_score",
+      "trend_strength",
+      "trend_acceleration"
+    ],
+    "architecture": {
+      "lstm_layers": 2,
+      "lstm_units": 64,
+      "cnn_filters": [
+        32,
+        64
+      ],
+      "cnn_kernel_sizes": [
+        3,
+        3
+      ],
+      "dropout_rate": 0.3,
+      "attention_mechanism": true
+    },
+    "outputs": [
+      "momentum_strength",
+      "momentum_direction",
+      "acceleration_score",
+      "reversal_probability"
+    ]
+  },
+  "breakout_agent": {
+    "name": "Breakout_Agent_v2",
+    "type": "Transformer_CNN",
+    "purpose": "Identify and confirm breakout patterns",
+    "features": [
+      "price_vs_resistance",
+      "price_vs_support",
+      "consolidation_duration",
+      "volume_spike_ratio",
+      "volatility_compression",
+      "bollinger_band_width",
+      "atr_ratio",
+      "range_break_score"
+    ],
+    "architecture": {
+      "transformer_layers": 2,
+      "attention_heads": 4,
+      "cnn_filters": [
+        32,
+        64,
+        128
+      ],
+      "positional_encoding": true,
+      "dropout_rate": 0.25
+    },
+    "outputs": [
+      "breakout_probability",
+      "breakout_strength",
+      "false_breakout_risk",
+      "target_price",
+      "stop_loss_level"
+    ]
+  },
+  "regime_agent": {
+    "name": "Market_Regime_Agent_v2",
+    "type": "RandomForest_GradientBoosting",
+    "purpose": "Detect current market regime and adjust strategy",
+    "features": [
+      "volatility_regime",
+      "trend_strength",
+      "market_correlation",
+      "volume_profile",
+      "liquidity_score",
+      "sentiment_index",
+      "macro_environment",
+      "risk_on_off"
+    ],
+    "regimes": [
+      "strong_trend_bullish",
+      "strong_trend_bearish",
+      "consolidation_range",
+      "high_volatility_chaotic",
+      "low_volatility_accumulation",
+      "breakout_imminent"
+    ],
+    "strategy_adjustments": {
+      "strong_trend_bullish": {
+        "trend_weight": 0.6,
+        "position_size": 1.2
+      },
+      "strong_trend_bearish": {
+        "trend_weight": 0.6,
+        "position_size": 0.8
+      },
+      "consolidation_range": {
+        "mean_reversion_weight": 0.7,
+        "position_size": 0.6
+      },
+      "high_volatility_chaotic": {
+        "position_size": 0.3,
+        "stop_multiplier": 3.0
+      },
+      "low_volatility_accumulation": {
+        "breakout_weight": 0.5,
+        "position_size": 0.9
+      },
+      "breakout_imminent": {
+        "breakout_weight": 0.8,
+        "position_size": 1.5
+      }
+    }
+  },
+  "existing_agents": [
+    "trend_agent",
+    "reversal_agent",
+    "volatility_agent"
+  ]
+}

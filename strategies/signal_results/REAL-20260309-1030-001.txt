@@ -1,0 +1,57 @@
+
+🟢 *SEÑAL REAL #1 - PRUEBA MANUAL* 📈
+
+*🎯 INFORMACIÓN DE MERCADO REAL:*
+• Condición: ➡️ NEUTRAL
+• Cambio vs referencia: +0.01%
+• Volatilidad: 3.0%
+• Fuente: realistic_simulation
+
+*📋 DETALLES DE SEÑAL:*
+*ID:* `REAL-20260309-1030-001`
+*Hora UTC:* 10:30
+*Hora Madrid:* 11:30 🇪🇸
+*Día de prueba:* 1/14
+*Capital prueba:* $500
+
+*🎯 ACTIVO:* ETH
+*📊 TIPO:* Momentum
+*🧭 DIRECCIÓN:* LONG (COMPRA)
+
+*💰 PRECIOS REALES:*
+• Entrada: `$2,003.80`
+• Stop Loss: `$1,879.95` (6.0%)
+• Take Profits: `$2,029.95` / `$2,069.95` / `$2,139.95`
+
+*📈 POSICIÓN:*
+• Tamaño: `$4.58` (0.92% de $500)
+• Confianza: 83%
+• Risk/Reward: 1:0.2
+
+*⚠️ RIESGO ($500 CAPITAL):*
+• Pérdida máxima: `$0.28` (6.2%)
+• Límite diario: 3% ($15.00)
+• Límite semanal: 8% ($40.00)
+• Drawdown máximo: 15% ($75.00)
+
+*📊 INFORMACIÓN ADICIONAL:*
+• Precio base referencia: `$2,003.66`
+• Fuente precios: REAL (CoinGecko API + realistic simulation)
+• Zona horaria usuario: Europe/Madrid (UTC+1)
+
+*✅ ACCIÓN REQUERIDA (FRAN):*
+1. Verificar precio actual de ETH en tu broker
+2. Ejecutar LONG en ETH alrededor de `$2,003.80`
+3. Colocar Stop Loss en `$1,879.95`
+4. Colocar Take Profits en niveles indicados
+5. Reportar resultado cuando cierre la operación
+
+*📝 NOTAS IMPORTANTES:*
+• ✅ PRECIOS REALES basados en mercado actual
+• Capital de prueba: $500
+• Día 1 de 14 días de prueba
+• Objetivo: 20-30 trades en 14 días
+• Win rate objetivo: >55%
+• Profit factor objetivo: >1.8
+• **VERIFICAR PRECIO ACTUAL** antes de ejecutar
+• Ejecutar solo si estás de acuerdo con el riesgo

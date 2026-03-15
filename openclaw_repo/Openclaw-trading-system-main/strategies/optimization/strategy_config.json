@@ -1,0 +1,15 @@
+{
+  "name": "Hybrid_Alpha_v1",
+  "objective": "Beat buy & hold by 2x",
+  "weights": {
+    "trend_following": 0.4,
+    "mean_reversion": 0.3,
+    "breakout_trading": 0.3
+  },
+  "risk_management": {
+    "max_position_size": 0.06,
+    "initial_position": 0.01,
+    "max_portfolio_risk": 0.2,
+    "daily_loss_limit": 0.03
+  }
+}

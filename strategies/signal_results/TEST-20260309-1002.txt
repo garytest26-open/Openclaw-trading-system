@@ -1,0 +1,41 @@
+
+🟢 *SEÑAL DE TRADING* 📈
+
+*ID:* `TEST-20260309-1002`
+*Hora:* 10:02 UTC
+
+*🎯 ACTIVO:* BTC
+*📊 TIPO:* Trend Following
+*🧭 DIRECCIÓN:* LONG (COMPRA)
+
+*💰 PRECIOS:*
+• Entrada: `$51,250.75`
+• Stop Loss: `$49,850.25`
+• Take Profits: `$52,015.01` / `$53,044.53` / `$54,838.3`
+
+*📈 POSICIÓN:*
+• Tamaño: `$615.0` (6.15% del capital)
+• Confianza: 82%
+• Risk/Reward: 1:1.8
+
+*⚠️ RIESGO:*
+• Pérdida máxima: `$184.5` (1.9%)
+• Límite diario: 3%
+• Límite semanal: 8%
+
+*📊 CONDICIONES DE MERCADO:*
+• Fuerza de tendencia: 0.75/1.0
+• Volatilidad: 2.8%
+• Volumen: 1.35x promedio
+
+*✅ ACCIÓN REQUERIDA:*
+1. Ejecutar LONG en BTC a `$51,250.75`
+2. Colocar Stop Loss en `$49,850.25`
+3. Colocar Take Profits en niveles indicados
+4. Reportar resultado cuando cierre la operación
+
+*📝 NOTAS:*
+• Esta es una señal de PRUEBA generada por el sistema Swarm AI optimizado
+• Ejecutar solo si el capital disponible permite el tamaño de posición
+• Considerar fees y slippage en la ejecución real
+• Señal de demostración - no usar con capital real
