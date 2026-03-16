@@ -18,10 +18,15 @@ def run_backtest():
     config.ticker = "SOL-USD"
     config.period = "1y" # Descargar exactamente 1 año
     config.n_features = 10
+    config.hidden_dim = 256 # Coincidir con el entrenamiento GPU
+    lstm_layers = 2         # Coincidir con el entrenamiento GPU
     
-    model_path = "models/tamc2_sol_ppo.pth"
+    model_path = "models/tamc2_improved_4090.pth"
     if not os.path.exists(model_path):
-        print(f"Error: Modelo no encontrado en {model_path}")
+        model_path = "tamc2_improved_4090.pth" # Fallback
+        
+    if not os.path.exists(model_path):
+        print(f"Error: Modelo mejorado (4090) no encontrado.")
         return
         
     # 2. Cargar Datos
@@ -34,10 +39,18 @@ def run_backtest():
     print(f"Datos preparados: {len(df)} velas de 1 hora.")
     
     # 3. Cargar Modelo
-    print("Cargando red neuronal PPO-LSTM...")
+    print("Cargando red neuronal PPO-LSTM (Arquitectura 5090)...")
     state_dim = config.n_features + 7
-    model = PPOActorCritic(state_dim, 5, config.hidden_dim).to(device)
-    model.load_state_dict(torch.load(model_path, map_location=device, weights_only=True))
+    model = PPOActorCritic(state_dim, 5, config.hidden_dim, lstm_layers=lstm_layers).to(device)
+    
+    # Cargar y limpiar claves si vienen de torch.compile()
+    state_dict = torch.load(model_path, map_location=device, weights_only=True)
+    new_state_dict = {}
+    for k, v in state_dict.items():
+        name = k.replace("_orig_mod.", "") # Eliminar prefijo de compilación
+        new_state_dict[name] = v
+        
+    model.load_state_dict(new_state_dict)
     model.eval()
     
     # 4. Configurar Entorno Simulado

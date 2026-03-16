@@ -144,12 +144,37 @@ def calculate_indicators(df: pd.DataFrame, config: StrategyConfig) -> pd.DataFra
     # Volatilidad relativa del Volumen
     df['Vol_Rel'] = df['Volume'] / (df['Volume'].rolling(window=24).mean() + 1e-6)
     
+    # 3. Indicadores de Régimen de Mercado (NUEVOS en TAMC 2.0 - v2)
+    # ADX (Fuerza de Tendencia)
+    df['plus_dm'] = np.where((df['High'] - df['High'].shift(1)) > (df['Low'].shift(1) - df['Low']), 
+                             np.maximum(df['High'] - df['High'].shift(1), 0), 0)
+    df['minus_dm'] = np.where((df['Low'].shift(1) - df['Low']) > (df['High'] - df['High'].shift(1)), 
+                              np.maximum(df['Low'].shift(1) - df['Low'], 0), 0)
+    
+    tr_smooth = tr.rolling(window=14).mean()
+    plus_dm_smooth = df['plus_dm'].rolling(window=14).mean()
+    minus_dm_smooth = df['minus_dm'].rolling(window=14).mean()
+    
+    df['plus_di'] = 100 * (plus_dm_smooth / (tr_smooth + 1e-6))
+    df['minus_di'] = 100 * (minus_dm_smooth / (tr_smooth + 1e-6))
+    df['dx'] = 100 * (np.abs(df['plus_di'] - df['minus_di']) / (df['plus_di'] + df['minus_di'] + 1e-6))
+    df['ADX'] = df['dx'].rolling(window=14).mean()
+    
+    # Choppiness Index (Lateralidad)
+    lookback_chop = 14
+    tr_sum = tr.rolling(window=lookback_chop).sum()
+    price_range = df['High'].rolling(window=lookback_chop).max() - df['Low'].rolling(window=lookback_chop).min()
+    df['Choppiness'] = 100 * np.log10(tr_sum / (price_range + 1e-6)) / np.log10(lookback_chop)
+    
     # Rellenar nulos intermedios y botar el bloque inestable inicial
     df.fillna(method='bfill', inplace=True)
     df.dropna(inplace=True)
     
-    # 3. Normalización Robusta
-    cols_to_norm = ['RSI', 'MACD_Hist', 'Dist_SMA200', 'Log_Ret', 'Vol_Rel', 'ATR_Ratio', 'BB_Width', 'Dist_VWAP']
+    # 4. Normalización Robusta
+    cols_to_norm = [
+        'RSI', 'MACD_Hist', 'Dist_SMA200', 'Log_Ret', 'Vol_Rel', 'ATR_Ratio', 
+        'BB_Width', 'Dist_VWAP', 'ADX', 'Choppiness'
+    ]
     for col in cols_to_norm:
         if col in df.columns:
             df[f'{col}_Norm'] = robust_scaler(df[col])
@@ -247,7 +272,7 @@ class TradingEnvironment:
         features_cols = [
             'RSI_Norm', 'MACD_Hist_Norm', 'Dist_SMA200_Norm', 'Log_Ret_Norm', 
             'Vol_Rel_Norm', 'ATR_Ratio_Norm', 'BB_Width_Norm', 'Dist_VWAP_Norm',
-            'Daily_RSI_Norm', 'Daily_Log_Ret_Norm'
+            'ADX_Norm', 'Choppiness_Norm'
         ]
         
         market_features = self.df.iloc[step][features_cols].values.astype(float)
@@ -319,7 +344,22 @@ class TradingEnvironment:
                 self.entry_price = 0.0
                 
             # Fuerte penalización en el step por hacer trading (fomenta holding)
-            reward -= (trade_cost / self.balance) * 50
+            reward -= (trade_cost / (self.balance + 1e-6)) * 50
+
+        # === 🛡️ STOP-LOSS DINÁMICO (ATR) ===
+        if self.position != 0:
+            atr = self.df.iloc[self.current_step]['ATR']
+            pnl_curr = (current_price - self.entry_price) / self.entry_price if self.position > 0 else (self.entry_price - current_price) / self.entry_price
+            
+            # Si perdemos más de 2x ATR, cerramos forzosamente (SL Dinámico)
+            sl_threshold = - (2 * atr / current_price)
+            if pnl_curr < sl_threshold:
+                # Liquidación forzosa
+                close_pnl = pnl_curr * abs(self.position)
+                liq_cost = abs(self.position) * self.config.commission_pct
+                self.balance += (close_pnl - liq_cost)
+                self.position = 0.0
+                reward -= 10.0 # Gran penalización por tocar Stop-Loss
 
         # === CÁLCULO EQUITY & RETURN ===
         current_equity = self.balance
@@ -347,12 +387,14 @@ class TradingEnvironment:
             volatility = np.std(recent_rets) + 1e-6
             reward -= volatility * 10
             
-            # Castigo Exponencial por Drawdown
-            peak = max(self.equity_curve[-100:] if len(self.equity_curve) > 100 else self.equity_curve)
+            # Castigo Exponencial por Drawdown (Activación temprana a 2%)
+            peak = max(self.equity_curve[-200:] if len(self.equity_curve) > 200 else self.equity_curve)
             if peak > 0:
                 drawdown = (peak - current_equity) / peak
-                if drawdown > 0.05:
-                    reward -= (drawdown ** 2) * 500  # Cuadrático para dolor exponencial
+                if drawdown > 0.02:
+                    reward -= (drawdown ** 2) * 1000  # Penalización más severa
+                if drawdown < 0.01 and self.position != 0:
+                    reward += 0.1 # Bonus por mantener equity cerca del pico
 
         # Penalización inactividad leve
         if self.position == 0:
